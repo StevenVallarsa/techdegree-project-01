@@ -40,13 +40,18 @@ const quotes = [
   },
 ];
 
+/**
+ * create variable to hold previous selected index. Starts out at -1
+ */
 let previousQuoteIndex = -1;
 
 /***
  * `getRandomQuote` function
  *
- * added extra step to prevent the same quote from being
- * displayed twice in a row
+ * added extra step to keep the same quote from being
+ * displayed twice in a row. The quote index generator
+ * will loop until an index number is selected that doesn't
+ * match the "previousQuoteIndex"
  ***/
 function getRandomQuote() {
   let duplicate = true;
